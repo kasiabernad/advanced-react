@@ -6,7 +6,7 @@ export default function(state = [], action) {
       const comments = action.payload.data.map(c => c.name);
       return [...state, ...comments]
     case SAVE_COMMENT:
-      return [...state, action.payload]
+      return [...state, action.payload, {}]
     default:
      return state;
   }
